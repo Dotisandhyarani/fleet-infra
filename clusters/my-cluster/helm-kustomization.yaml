@@ -17,9 +17,9 @@ spec:
         apiVersion: autoscaling/v2beta2
         kind: HorizontalPodAutoscaler
         metadata:
-          name: podinfo
+          name: helm
         spec:
           minReplicas: 3             
       target:
-        name: podinfo
+        name: helm
         kind: HorizontalPodAutoscaler
