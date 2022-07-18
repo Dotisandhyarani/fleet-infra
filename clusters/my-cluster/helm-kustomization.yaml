@@ -12,15 +12,14 @@ spec:
     kind: GitRepository
     name: helm
   targetNamespace: default
-    patches:
+  patches:
     - patch: |-
         apiVersion: autoscaling/v2beta2
         kind: HorizontalPodAutoscaler
         metadata:
-          name: helm
+          name: podinfo
         spec:
           minReplicas: 3             
       target:
-        name: helm
+        name: podinfo
         kind: HorizontalPodAutoscaler
-
